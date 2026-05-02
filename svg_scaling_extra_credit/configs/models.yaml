@@ -1,0 +1,69 @@
+# Suggested 5-model family from the assignment. Adjust only if GPU memory/time forces you to.
+# Parameter counts are computed by train.py and written into metrics.json.
+common:
+  block_size: 1024
+  dropout: 0.1
+  bias: false
+  weight_decay: 0.1
+  beta1: 0.9
+  beta2: 0.95
+  grad_clip: 1.0
+  warmup_frac: 0.03
+  min_lr_frac: 0.1
+  batch_size: 16        # sequences per optimizer step; tokens/step=batch_size*block_size
+  eval_interval: 500
+  eval_iters: 100
+  max_steps: 0          # 0 means train for exactly one epoch over train.bin
+models:
+  tiny:
+    n_layer: 4
+    n_head: 4
+    n_embd: 128
+    d_ff: 512
+  small:
+    n_layer: 6
+    n_head: 6
+    n_embd: 192
+    d_ff: 768
+  medium:
+    n_layer: 6
+    n_head: 6
+    n_embd: 384
+    d_ff: 1536
+  large:
+    n_layer: 10
+    n_head: 8
+    n_embd: 512
+    d_ff: 2048
+  xl:
+    n_layer: 12
+    n_head: 12
+    n_embd: 768
+    d_ff: 3072
+# Emergency feasible fallback for laptop/single small GPU: still use 5 sizes and justify reduced scale.
+fallback_models:
+  tiny:
+    n_layer: 2
+    n_head: 2
+    n_embd: 96
+    d_ff: 384
+  small:
+    n_layer: 3
+    n_head: 3
+    n_embd: 144
+    d_ff: 576
+  medium:
+    n_layer: 4
+    n_head: 4
+    n_embd: 192
+    d_ff: 768
+  large:
+    n_layer: 6
+    n_head: 6
+    n_embd: 288
+    d_ff: 1152
+  xl:
+    n_layer: 8
+    n_head: 8
+    n_embd: 384
+    d_ff: 1536

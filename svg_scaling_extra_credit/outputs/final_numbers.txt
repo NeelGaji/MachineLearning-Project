@@ -1,0 +1,412 @@
+
+=== Dataset stats ===
+{
+  "datasets": [
+    "starvector/svg-icons-simple",
+    "starvector/svg-emoji-simple",
+    "starvector/svg-fonts-simple"
+  ],
+  "vocab_size_requested": 4096,
+  "vocab_size_actual": 344,
+  "max_token_len": 1024,
+  "min_chars": 50,
+  "precision": 1,
+  "counts": {
+    "raw": 300000,
+    "too_short": 0,
+    "xml_invalid": 0,
+    "render_invalid": 0,
+    "kept_after_xml": 300000
+  },
+  "after_token_filter_files": 260538,
+  "length_stats": {
+    "min": 79,
+    "median": 400.0,
+    "mean": 436.6362795446346,
+    "p90": 725.0,
+    "p99": 982.0,
+    "max": 1024
+  },
+  "splits": {
+    "train": {
+      "files": 255327,
+      "tokens": 111492669
+    },
+    "val": {
+      "files": 2605,
+      "tokens": 1143974
+    },
+    "test": {
+      "files": 2606,
+      "tokens": 1123700
+    }
+  }
+}
+
+=== LR sweep ===
+{
+  "runs": [
+    {
+      "lr": 0.0001,
+      "val_loss": 4.588045597076416,
+      "out_dir": "runs/sp_lr_sweep_warmup/tiny_sp_lr0.0001"
+    },
+    {
+      "lr": 0.0003,
+      "val_loss": 3.8084256649017334,
+      "out_dir": "runs/sp_lr_sweep_warmup/tiny_sp_lr0.0003"
+    },
+    {
+      "lr": 0.0006,
+      "val_loss": 2.989093542098999,
+      "out_dir": "runs/sp_lr_sweep_warmup/tiny_sp_lr0.0006"
+    },
+    {
+      "lr": 0.001,
+      "val_loss": 2.3915750980377197,
+      "out_dir": "runs/sp_lr_sweep_warmup/tiny_sp_lr0.001"
+    },
+    {
+      "lr": 0.003,
+      "val_loss": 3.413877010345459,
+      "out_dir": "runs/sp_lr_sweep_warmup/tiny_sp_lr0.003"
+    }
+  ],
+  "best": {
+    "lr": 0.001,
+    "val_loss": 2.3915750980377197,
+    "out_dir": "runs/sp_lr_sweep_warmup/tiny_sp_lr0.001"
+  }
+}
+
+=== SP model summaries ===
+runs/sp_tiny {
+  "model_name": "tiny",
+  "use_mup": false,
+  "params": 962688,
+  "best_val_loss": 1.8269158601760864,
+  "final_iter": 100,
+  "tokens_seen": 1638400,
+  "epoch_equiv": 0.014695136592344022,
+  "elapsed_sec": 106.27423310279846,
+  "peak_mem_gb": 0.0,
+  "config": {
+    "vocab_size": 344,
+    "block_size": 1024,
+    "n_layer": 4,
+    "n_head": 4,
+    "n_embd": 128,
+    "d_ff": 512,
+    "dropout": 0.1,
+    "bias": false,
+    "use_mup": false
+  },
+  "data_stats": {
+    "datasets": [
+      "starvector/svg-icons-simple",
+      "starvector/svg-emoji-simple",
+      "starvector/svg-fonts-simple"
+    ],
+    "vocab_size_requested": 4096,
+    "vocab_size_actual": 344,
+    "max_token_len": 1024,
+    "min_chars": 50,
+    "precision": 1,
+    "counts": {
+      "raw": 300000,
+      "too_short": 0,
+      "xml_invalid": 0,
+      "render_invalid": 0,
+      "kept_after_xml": 300000
+    },
+    "after_token_filter_files": 260538,
+    "length_stats": {
+      "min": 79,
+      "median": 400.0,
+      "mean": 436.6362795446346,
+      "p90": 725.0,
+      "p99": 982.0,
+      "max": 1024
+    },
+    "splits": {
+      "train": {
+        "files": 255327,
+        "tokens": 111492669
+      },
+      "val": {
+        "files": 2605,
+        "tokens": 1143974
+      },
+      "test": {
+        "files": 2606,
+        "tokens": 1123700
+      }
+    }
+  },
+  "learning_rate": 0.001
+}
+runs/sp_small {
+  "model_name": "small",
+  "use_mup": false,
+  "params": 2919360,
+  "best_val_loss": 1.7473647594451904,
+  "final_iter": 100,
+  "tokens_seen": 1638400,
+  "epoch_equiv": 0.014695136592344022,
+  "elapsed_sec": 268.9795482158661,
+  "peak_mem_gb": 0.0,
+  "config": {
+    "vocab_size": 344,
+    "block_size": 1024,
+    "n_layer": 6,
+    "n_head": 6,
+    "n_embd": 192,
+    "d_ff": 768,
+    "dropout": 0.1,
+    "bias": false,
+    "use_mup": false
+  },
+  "data_stats": {
+    "datasets": [
+      "starvector/svg-icons-simple",
+      "starvector/svg-emoji-simple",
+      "starvector/svg-fonts-simple"
+    ],
+    "vocab_size_requested": 4096,
+    "vocab_size_actual": 344,
+    "max_token_len": 1024,
+    "min_chars": 50,
+    "precision": 1,
+    "counts": {
+      "raw": 300000,
+      "too_short": 0,
+      "xml_invalid": 0,
+      "render_invalid": 0,
+      "kept_after_xml": 300000
+    },
+    "after_token_filter_files": 260538,
+    "length_stats": {
+      "min": 79,
+      "median": 400.0,
+      "mean": 436.6362795446346,
+      "p90": 725.0,
+      "p99": 982.0,
+      "max": 1024
+    },
+    "splits": {
+      "train": {
+        "files": 255327,
+        "tokens": 111492669
+      },
+      "val": {
+        "files": 2605,
+        "tokens": 1143974
+      },
+      "test": {
+        "files": 2606,
+        "tokens": 1123700
+      }
+    }
+  },
+  "learning_rate": 0.001
+}
+runs/sp_medium {
+  "model_name": "medium",
+  "use_mup": false,
+  "params": 2033856,
+  "best_val_loss": 1.717090129852295,
+  "final_iter": 100,
+  "tokens_seen": 1638400,
+  "epoch_equiv": 0.014695136592344022,
+  "elapsed_sec": 122.96335101127625,
+  "peak_mem_gb": 0.0,
+  "config": {
+    "vocab_size": 344,
+    "block_size": 1024,
+    "n_layer": 4,
+    "n_head": 4,
+    "n_embd": 192,
+    "d_ff": 768,
+    "dropout": 0.1,
+    "bias": false,
+    "use_mup": false
+  },
+  "data_stats": {
+    "datasets": [
+      "starvector/svg-icons-simple",
+      "starvector/svg-emoji-simple",
+      "starvector/svg-fonts-simple"
+    ],
+    "vocab_size_requested": 4096,
+    "vocab_size_actual": 344,
+    "max_token_len": 1024,
+    "min_chars": 50,
+    "precision": 1,
+    "counts": {
+      "raw": 300000,
+      "too_short": 0,
+      "xml_invalid": 0,
+      "render_invalid": 0,
+      "kept_after_xml": 300000
+    },
+    "after_token_filter_files": 260538,
+    "length_stats": {
+      "min": 79,
+      "median": 400.0,
+      "mean": 436.6362795446346,
+      "p90": 725.0,
+      "p99": 982.0,
+      "max": 1024
+    },
+    "splits": {
+      "train": {
+        "files": 255327,
+        "tokens": 111492669
+      },
+      "val": {
+        "files": 2605,
+        "tokens": 1143974
+      },
+      "test": {
+        "files": 2606,
+        "tokens": 1123700
+      }
+    }
+  },
+  "learning_rate": 0.001
+}
+runs/sp_large {
+  "model_name": "large",
+  "use_mup": false,
+  "params": 6369696,
+  "best_val_loss": 1.734655499458313,
+  "final_iter": 100,
+  "tokens_seen": 1638400,
+  "epoch_equiv": 0.014695136592344022,
+  "elapsed_sec": 385.23509407043457,
+  "peak_mem_gb": 0.0,
+  "config": {
+    "vocab_size": 344,
+    "block_size": 1024,
+    "n_layer": 6,
+    "n_head": 6,
+    "n_embd": 288,
+    "d_ff": 1152,
+    "dropout": 0.1,
+    "bias": false,
+    "use_mup": false
+  },
+  "data_stats": {
+    "datasets": [
+      "starvector/svg-icons-simple",
+      "starvector/svg-emoji-simple",
+      "starvector/svg-fonts-simple"
+    ],
+    "vocab_size_requested": 4096,
+    "vocab_size_actual": 344,
+    "max_token_len": 1024,
+    "min_chars": 50,
+    "precision": 1,
+    "counts": {
+      "raw": 300000,
+      "too_short": 0,
+      "xml_invalid": 0,
+      "render_invalid": 0,
+      "kept_after_xml": 300000
+    },
+    "after_token_filter_files": 260538,
+    "length_stats": {
+      "min": 79,
+      "median": 400.0,
+      "mean": 436.6362795446346,
+      "p90": 725.0,
+      "p99": 982.0,
+      "max": 1024
+    },
+    "splits": {
+      "train": {
+        "files": 255327,
+        "tokens": 111492669
+      },
+      "val": {
+        "files": 2605,
+        "tokens": 1143974
+      },
+      "test": {
+        "files": 2606,
+        "tokens": 1123700
+      }
+    }
+  },
+  "learning_rate": 0.001
+}
+runs/sp_xl {
+  "model_name": "xl",
+  "use_mup": false,
+  "params": 14687616,
+  "best_val_loss": 3.609170436859131,
+  "final_iter": 10,
+  "tokens_seen": 163840,
+  "epoch_equiv": 0.0014695136592344023,
+  "elapsed_sec": 1814.594247341156,
+  "peak_mem_gb": 0.0,
+  "config": {
+    "vocab_size": 344,
+    "block_size": 1024,
+    "n_layer": 8,
+    "n_head": 8,
+    "n_embd": 384,
+    "d_ff": 1536,
+    "dropout": 0.1,
+    "bias": false,
+    "use_mup": false
+  },
+  "data_stats": {
+    "datasets": [
+      "starvector/svg-icons-simple",
+      "starvector/svg-emoji-simple",
+      "starvector/svg-fonts-simple"
+    ],
+    "vocab_size_requested": 4096,
+    "vocab_size_actual": 344,
+    "max_token_len": 1024,
+    "min_chars": 50,
+    "precision": 1,
+    "counts": {
+      "raw": 300000,
+      "too_short": 0,
+      "xml_invalid": 0,
+      "render_invalid": 0,
+      "kept_after_xml": 300000
+    },
+    "after_token_filter_files": 260538,
+    "length_stats": {
+      "min": 79,
+      "median": 400.0,
+      "mean": 436.6362795446346,
+      "p90": 725.0,
+      "p99": 982.0,
+      "max": 1024
+    },
+    "splits": {
+      "train": {
+        "files": 255327,
+        "tokens": 111492669
+      },
+      "val": {
+        "files": 2605,
+        "tokens": 1143974
+      },
+      "test": {
+        "files": 2606,
+        "tokens": 1123700
+      }
+    }
+  },
+  "learning_rate": 0.001
+}
+
+=== Scaling fit files ===
+outputs/scaling_sp/fit_results.json
+outputs/scaling_sp/scaling_results.csv
+outputs/scaling_sp/scaling_plot.png

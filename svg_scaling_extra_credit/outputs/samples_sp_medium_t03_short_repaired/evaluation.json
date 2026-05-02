@@ -1,0 +1,98 @@
+{
+  "n": 11,
+  "xml_valid_rate": 1.0,
+  "root_svg_rate": 1.0,
+  "closed_svg_rate": 1.0,
+  "render_rate": 0.0,
+  "has_viewBox_rate": 1.0,
+  "rows": [
+    {
+      "file": "unconditional_t0.3_sample00.svg",
+      "xml_valid": true,
+      "root_svg": true,
+      "closed_svg": true,
+      "has_viewBox": true,
+      "render_valid": false
+    },
+    {
+      "file": "unconditional_t0.3_sample01.svg",
+      "xml_valid": true,
+      "root_svg": true,
+      "closed_svg": true,
+      "has_viewBox": true,
+      "render_valid": false
+    },
+    {
+      "file": "unconditional_t0.3_sample02.svg",
+      "xml_valid": true,
+      "root_svg": true,
+      "closed_svg": true,
+      "has_viewBox": true,
+      "render_valid": false
+    },
+    {
+      "file": "unconditional_t0.3_sample03.svg",
+      "xml_valid": true,
+      "root_svg": true,
+      "closed_svg": true,
+      "has_viewBox": true,
+      "render_valid": false
+    },
+    {
+      "file": "unconditional_t0.3_sample04.svg",
+      "xml_valid": true,
+      "root_svg": true,
+      "closed_svg": true,
+      "has_viewBox": true,
+      "render_valid": false
+    },
+    {
+      "file": "unconditional_t0.3_sample05.svg",
+      "xml_valid": true,
+      "root_svg": true,
+      "closed_svg": true,
+      "has_viewBox": true,
+      "render_valid": false
+    },
+    {
+      "file": "unconditional_t0.3_sample06.svg",
+      "xml_valid": true,
+      "root_svg": true,
+      "closed_svg": true,
+      "has_viewBox": true,
+      "render_valid": false
+    },
+    {
+      "file": "unconditional_t0.3_sample07.svg",
+      "xml_valid": true,
+      "root_svg": true,
+      "closed_svg": true,
+      "has_viewBox": true,
+      "render_valid": false
+    },
+    {
+      "file": "unconditional_t0.3_sample08.svg",
+      "xml_valid": true,
+      "root_svg": true,
+      "closed_svg": true,
+      "has_viewBox": true,
+      "render_valid": false
+    },
+    {
+      "file": "unconditional_t0.3_sample09.svg",
+      "xml_valid": true,
+      "root_svg": true,
+      "closed_svg": true,
+      "has_viewBox": true,
+      "render_valid": false
+    },
+    {
+      "file": "~$conditional_t0.3_sample00.svg",
+      "xml_valid": true,
+      "root_svg": true,
+      "closed_svg": true,
+      "has_viewBox": true,
+      "render_valid": false
+    }
+  ]
+}
