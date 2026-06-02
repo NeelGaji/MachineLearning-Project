@@ -1,4 +1,4 @@
-# SVG Transformer Scaling Laws Extra Credit Project
+# SVG Transformer Scaling Laws Project
 
 This repository is a complete starter implementation for the CS-GY 6923 optional SVG scaling-law project.
 It covers preprocessing, ByteLevel BPE tokenization, decoder-only Transformer training, LR sweeps,
